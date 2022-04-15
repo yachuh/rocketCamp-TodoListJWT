@@ -1,0 +1,70 @@
+// side banner
+.sideBanner {
+    width: 386px;
+    align-items: center;
+
+    .logoImg {
+        margin-bottom: 20px;
+    }
+
+    @include mobile {
+        max-width: 304px;
+    }
+}
+
+//form 
+form {
+    display: flex;
+    flex-direction: column;
+
+    .ft-title {
+        margin-bottom: 24px;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-size: $font-size-sm;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+
+    .input-text {
+        font-size: $font-size-base;
+        font-weight: normal;
+        border: none;
+        border-radius: 10px;
+        width: 304px;
+        padding: 12px 16px;
+
+        &::placeholder {
+            color: $colors-info;
+            font-size: $font-size-base;
+        }
+
+    }
+    .btn-submit {
+        width: 128px;
+        height: 48px;
+        border: none;
+        border-radius: 10px;
+        background: $colors-primary;
+        color: $colors-success;
+        align-self: center;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 8px 0;
+    }
+
+    a {
+        display: block;
+        color: $colors-primary;
+        font-size: $h6-font-size;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        margin-top: 16px;
+    }
+}

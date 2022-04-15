@@ -1,0 +1,221 @@
+//login page
+.login {
+    width: 800px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 87px auto;
+
+    @include mobile {
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 48px 31px;
+    }
+}
+
+.loginForm {
+    margin-left: 106px;
+
+    @include mobile {
+        margin-left: 0;
+    }
+}
+
+//sigup page
+
+.signup {
+    width: 800px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 87px auto;
+
+    @include mobile {
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 48px 31px;
+    }
+}
+
+.signupForm {
+    margin-left: 106px;
+
+    @include mobile {
+        margin: 0 auto;
+    }
+}
+
+//todoListPage
+
+.todos {
+    width: 500px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+
+    @include mobile {
+        width: 311px;
+    }
+}
+
+.todos-inputBox {
+    display: flex;
+    position: relative;
+    margin-bottom: 16px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+
+    input {
+        background: #fff;
+        border: none;
+        border-radius: 10px;
+        position: relative;
+        width: 100%;
+        height: 47px;
+        font-size: $font-size-base;
+        padding-left: 16px;
+    }
+    a {
+        display: block;
+        width: 40px;
+        height: 39px;
+        position: absolute;
+        background: $colors-primary;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 10px;
+        top: 4px;
+        right: 4px;
+        padding: 10px;
+    }
+}
+
+
+.todos-list {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+    font-size: $font-size-sm;
+}
+
+.tab {
+    justify-content: space-evenly;
+
+    li {
+        width: 100%;
+    }
+
+    a {
+        display: block;
+        color: $colors-info;
+        text-decoration: none;
+        line-height: 20px;
+        font-weight: bold;
+        text-align: center;
+        padding: 16px 0px;
+        border-bottom: 2px solid #EFEFEF;
+        // &:active { 
+        //     color: $colors-primary;
+        //     border-bottom: 2px solid $colors-primary;
+        // }
+    }
+
+    .active {
+        color: $colors-primary;
+        border-bottom: 2px solid $colors-primary;
+    }
+}
+
+
+.todos-content {
+    padding: 23px 16px 32px 16px;
+
+    .todos-content-list {
+        margin-bottom: 8px;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 17px;
+        border-bottom: 1px solid #E5E5E5;
+        
+        label {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            padding-bottom: 15px;
+            margin-right: 17px;
+            color: $colors-primary;
+            line-height: 20.27px;
+            
+            input[type=checkbox] {
+                width: 20px;
+                height: 20px;
+                border: 1px solid $colors-info;
+                border-radius: 5px;
+                margin-right: 16px;
+                box-sizing: border-box;
+                cursor: pointer;
+                
+                &:checked~span {
+                    color: $colors-info;
+                    text-decoration: line-through;
+                    transition: all 0.4s ease-in-out;
+                }
+            }
+            
+        }
+
+        .btn-del {
+            display: none;
+            color: $colors-primary;
+            padding-bottom: 15px;
+            transition: transform 0.2s;
+            &:hover {
+                transform: scale(1.5)
+            }
+        }
+        
+        .btn-edit {
+            display: none;
+            color: $colors-primary;
+            padding-bottom: 15px;
+            margin-right: 12px;
+            transition: transform 0.2s;
+            &:hover {
+                transform: scale(1.5)
+            }
+        }
+
+        &:hover {
+            .btn-del, .btn-edit{
+                display: block;
+            }
+        }
+        
+
+
+    }
+
+
+    .todos-content-footer {
+        justify-content: space-between;
+    
+        p {
+            color: $colors-primary;
+            font-size: $font-size-sm;
+        }
+    
+        a {
+            color: $colors-info;
+            font-size: $font-size-sm;
+            text-decoration: none;
+
+            &:hover{
+                color:darken($colors-info,20%);
+            }
+        }
+    }
+}
+

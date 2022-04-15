@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="img/smallIcon.svg">
+    <script src="https://kit.fontawesome.com/0f3f38a034.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/all.css">
+    <title>ToDo List</title>
+</head>
+
+<body class="bg-yellow">
+    <header class="container hidden">
+        <nav class="flex">
+            <h1><a href="#">ONLINE TODO LIST</a></h1>
+            <ul class="flex">
+                <li class="d-m-n"><a href="#"><span class="text-bold">王小明的代辦</span></a></li>
+                <li><a href="#">登出</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- login_page -->
+    <div class="container login flex hidden">
+        <div class="sideBanner">
+            <a href="#"><img class="logoImg" src="./img/logo.svg" alt="logoImg"></a>
+            <img class="d-m-n" src="./img/img.png" alt="workImg">
+        </div>
+        <form class="loginForm" action="index.html">
+            <h2 class="ft-title">最實用的線上代辦事項服務</h2>
+            <label for="email">Email
+                <input class="input-text" type="text" id="email" name="email" placeholder="請輸入 email" required>
+                <span class="text-alert">此欄位不可留空</span>
+            </label>
+            <label for="pwd">密碼
+                <input class="input-text" type="password" name="pwd" id="pwd" placeholder="請輸入密碼" required>
+            </label>
+            <input type="button" value="登入" class="btn-submit btn-login">
+            <a href="./index.html" class="btn-register">註冊帳號</a>
+        </form>
+    </div>
+
+    <!-- sign up -->
+    <div class="container signup flex">
+        <div class="sideBanner">
+            <a href="#"><img class="logoImg" src="./img/logo.svg" alt="logoImg"></a>
+            <img class="d-m-n" src="./img/img.png" alt="workImg">
+        </div>
+        <form class="signupForm" action="index.html">
+            <h2 class="ft-title">註冊帳號</h2>
+            <label for="email">Email
+                <input class="input-text" type="text" name="email" placeholder="請輸入 email" required>
+            </label>
+            <label for="name">您的暱稱
+                <input class="input-text" type="text" name="name" placeholder="請輸入您的暱稱">
+            </label>
+            <label for="pwd">密碼
+                <input class="input-text" type="password" name="pwd" placeholder="請輸入密碼" required>
+            </label>
+            <label for="pwd2">再次輸入密碼
+                <input class="input-text" type="password" name="pwd2" placeholder="請再次輸入密碼" required>
+            </label>
+            <input type="button" value="註冊帳號" class="btn-submit">
+            <a href="#" class="btn-login">登入</a>
+        </form>
+    </div>
+
+    <!-- ToDo List -->
+    <div class="container bg-half">
+        <div class="todos hidden">
+            <div class="todos-inputBox">
+                <input class="userInput" type="text" placeholder="請輸入待辦事項">
+                <a class="btn-add" href="#">
+                    <i class="fa fa-plus"></i>
+                </a>
+            </div>
+            <div class="todos-list">
+                <ul class="tab flex">
+                    <li><a href="#" class="active">全部</a></li>
+                    <li><a href="#">待完成</a></li>
+                    <li><a href="#">已完成</a></li>
+                </ul>
+                <div class="todos-content">
+                    <ul class="todos-content-list">
+                    </ul>
+                    <div class="todos-content-footer flex">
+                        <p></p>
+                        <a href="#" class="btn-delAll">清除已完成項目</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+html {
+    font-family: "Noto Sans TC";
+    color: $colors-primary;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.hidden {
+    display: none;
+}
+
+// background 
+.bg-yellow {
+    background-color: $colors-secondary;
+}
+
+.bg-half {
+    background-image: linear-gradient(175deg, $colors-secondary 60%, $colors-success 40%);
+}
+
+//font
+.ft-title {
+    font-size: $h4-font-size;
+    font-weight: bold;
+
+    @include mobile {
+        font-size: $h5-font-size;
+        text-align: center;
+    }
+}
+
+.text-alert {
+    color: #d87355;
+    font-size: $font-size-sm;
+}
+
+.text-info {
+    color: $colors-info;
+    font-size: $font-size-sm;
+}
+
+.text-bold {
+    font-weight: bold;
+}
